@@ -175,6 +175,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.msm8916 \
+    libshims_camera \
+    libc_util \
     Camera2
 
 # Permissions
