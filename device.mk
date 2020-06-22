@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.msm8916 \
     libshims_camera \
+    libcamera_shim \
     libc_util \
     Camera2
 

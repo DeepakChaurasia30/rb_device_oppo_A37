@@ -24,6 +24,14 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_SRC_FILES := camera_shim.c
+LOCAL_SHARED_LIBRARIES := libutils libgui liblog
+LOCAL_MODULE := libcamera_shim
+LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := atomic.cpp
 LOCAL_WHOLE_STATIC_LIBRARIES := libcutils
 LOCAL_SHARED_LIBRARIES := liblog libbase

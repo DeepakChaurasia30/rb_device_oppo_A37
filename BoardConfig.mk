@@ -163,6 +163,8 @@ SELINUX_IGNORE_NEVERALLOWS := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.vendor.msm8916.so|libshims_camera.so \
+    /system/vendor/lib/libmmcamera2_stats_modules.so|libcamera_shim.so \
+    /system/vendor/lib/libmmcamera2_stats_algorithm.so|libc_util.so \
     /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so
 
 # SEpolicy
