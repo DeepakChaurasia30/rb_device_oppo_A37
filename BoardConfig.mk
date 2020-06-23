@@ -148,24 +148,23 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Camera
-BOARD_CAMERA_SENSORS := s5k3h7_15399 ov5648_front
+BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
+BOARD_GLOBAL_CFLAGS += -DCONFIG_OPPO_CAMERA_51
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-	/system/bin/mediaserver=22 \
-	/system/vendor/bin/mm-qcamera-daemon=22
+	/system/bin/mediaserver=23 \
+	/system/vendor/bin/mm-qcamera-daemon=23
 
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# Shims
+# Shim
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/hw/camera.vendor.msm8916.so|libshims_camera.so \
-    /system/vendor/lib/libmmcamera2_stats_modules.so|libcamera_shim.so \
-    /system/vendor/lib/libmmcamera2_stats_algorithm.so|libc_util.so \
-    /system/vendor/lib/libmmcamera_wavelet_lib.so|libc_util.so
+    /system/vendor/lib/libmmcamera2_stats_modules.so|libshim_camera.so \
+    /system/vendor/lib/libmmcamera2_stats_algorithm.so|libcamera_shim.so \
+    /system/vendor/lib/hw/camera.vendor.msm8916.so|libshim_camera.so
 
 # SEpolicy
 BOARD_SEPOLICY_DIRS += \

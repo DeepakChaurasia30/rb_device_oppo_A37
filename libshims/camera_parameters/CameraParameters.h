@@ -14,9 +14,16 @@
  * limitations under the License.
  */
 
-#include <string>
-#define ANDROID_ATOMIC_INLINE
-extern "C" {
-#include <cutils/atomic.h>
-}
+namespace android {
 
+class CameraParameters
+{
+public:
+    static const char KEY_TRACK_ENABLE[];
+    static const char KEY_TRACK_AREAS[];
+    static const char KEY_APP_MASK[];
+    static const char FOCUS_MODE_MANUAL_POSITION[];
+    static const char WHITE_BALANCE_MANUAL_CCT[];
+};
+
+}; // namespace android

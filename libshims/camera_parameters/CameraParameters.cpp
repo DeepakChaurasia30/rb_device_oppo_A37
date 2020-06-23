@@ -14,9 +14,14 @@
  * limitations under the License.
  */
 
-#include <string>
-#define ANDROID_ATOMIC_INLINE
-extern "C" {
-#include <cutils/atomic.h>
-}
+#include "CameraParameters.h"
 
+namespace android {
+
+const char CameraParameters::KEY_TRACK_ENABLE[] = "track-enable";
+const char CameraParameters::KEY_TRACK_AREAS[] = "track-areas";
+const char CameraParameters::KEY_APP_MASK[] = "app-mask";
+const char CameraParameters::FOCUS_MODE_MANUAL_POSITION[] = "manual";
+const char CameraParameters::WHITE_BALANCE_MANUAL_CCT[] = "manual-cct";
+
+}; // namespace android
