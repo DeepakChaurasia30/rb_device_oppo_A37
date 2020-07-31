@@ -391,7 +391,7 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
-    persist.data.target=dpm1 \
+    persist.data.target=dpm3 \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.telephony.call_ring.multiple=false \
     ro.use_data_netmgrd=true \
@@ -429,6 +429,7 @@ PRODUCT_PACKAGES += \
     accelcal \
     AccCalibration \
     sensord \
+    calmodule.cfg \
     sensors.msm8916
 
 # Permissions
