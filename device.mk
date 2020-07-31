@@ -98,7 +98,8 @@ PRODUCT_COPY_FILES += \
     device/oppo/A37/audio/acdb/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
     device/oppo/A37/audio/audio_platform_info.xml:system/vendor/etc/audio_platform_info.xml \
     device/oppo/A37/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf \
-    device/oppo/A37/audio/mixer_paths.xml:system/vendor/etc/mixer_paths_qrd_skui.xml
+    device/oppo/A37/audio/mixer_paths.xml:system/vendor/etc/mixer_paths.xml \
+    device/oppo/A37/audio/mixer_paths_mtp.xml:system/vendor/etc/mixer_paths_mtp.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
