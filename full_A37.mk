@@ -15,25 +15,16 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from a6000 device
-$(call inherit-product, device/lenovo/a6000/device.mk)
+# Inherit from A37 device
+$(call inherit-product, device/oppo/A37/device.mk)
 
 # Device identifier. This must come after all inclusions
-TARGET_VENDOR := Lenovo
-PRODUCT_DEVICE := a6000
-PRODUCT_NAME := full_a6000
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := A6000
-PRODUCT_MANUFACTURER := Lenovo
-
-# Device Identifiers
-PRODUCT_BUILD_PROP_OVERRIDES += \
-     PRODUCT_MODEL="Lenovo A6000" \
-     PRODUCT_NAME="Kraft-A6000" \
-     PRODUCT_DEVICE="Kraft-A6000"
-
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.build.product=Kraft-A6000
+TARGET_VENDOR := Oppo
+PRODUCT_DEVICE := A37
+PRODUCT_NAME := full_A37
+PRODUCT_BRAND := Oppo
+PRODUCT_MODEL := A37
+PRODUCT_MANUFACTURER := Oppo
 
