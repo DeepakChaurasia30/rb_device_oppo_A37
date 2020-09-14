@@ -152,8 +152,8 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 BOARD_GLOBAL_CFLAGS += -DCONFIG_OPPO_CAMERA_51
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-	/system/bin/mediaserver=23 \
-	/system/vendor/bin/mm-qcamera-daemon=23
+	/system/bin/mediaserver=22 \
+	/system/vendor/bin/mm-qcamera-daemon=22
 
 # GPS
 TARGET_NO_RPC := true
