@@ -1,4 +1,3 @@
 subdirs = [
-    "hardware_interface",
-    "sensors"
+    "hardware_interface"
 ]
