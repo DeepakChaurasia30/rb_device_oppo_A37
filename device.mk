@@ -85,20 +85,21 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl
 
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/audio/audio_effects.xml:system/vendor/etc/audio_effects.xml
+    device/oppo/A37/audio/audio_effects.xml:system/vendor/etc/audio_effects.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/audio/acdb/QRD_Bluetooth_cal.acdb:system/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_General_cal.acdb:system/etc/acdbdata/QRD/QRD_General_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_Global_cal.acdb:system/etc/acdbdata/QRD/QRD_Global_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_Handset_cal.acdb:system/etc/acdbdata/QRD/QRD_Handset_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
-    device/lenovo/a6000/audio/acdb/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
-    device/lenovo/a6000/audio/audio_platform_info.xml:system/vendor/etc/audio_platform_info.xml \
-    device/lenovo/a6000/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf \
-    device/lenovo/a6000/audio/mixer_paths.xml:system/vendor/etc/mixer_paths_qrd_skui.xml
+    device/oppo/A37/audio/acdb/QRD_Bluetooth_cal.acdb:system/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_General_cal.acdb:system/etc/acdbdata/QRD/QRD_General_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_Global_cal.acdb:system/etc/acdbdata/QRD/QRD_Global_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_Handset_cal.acdb:system/etc/acdbdata/QRD/QRD_Handset_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
+    device/oppo/A37/audio/acdb/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
+    device/oppo/A37/audio/audio_platform_info.xml:system/vendor/etc/audio_platform_info.xml \
+    device/oppo/A37/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf \
+    device/oppo/A37/audio/mixer_paths.xml:system/vendor/etc/mixer_paths.xml \
+    device/oppo/A37/audio/mixer_paths_mtp.xml:system/vendor/etc/mixer_paths_mtp.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -138,8 +139,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
-    camera.msm8916 \
-    libmm-qcamera \
     libshim_atomic \
     Snap
 
@@ -160,11 +159,11 @@ PRODUCT_PACKAGES += \
     gps.msm8916
 
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/gps/flp.conf:system/etc/flp.conf \
-    device/lenovo/a6000/gps/gps.conf:system/etc/gps.conf \
-    device/lenovo/a6000/gps/izat.conf:system/etc/izat.conf \
-    device/lenovo/a6000/gps/sap.conf:system/etc/sap.conf \
-    device/lenovo/a6000/gps/quipc.conf:system/etc/quipc.conf
+    device/oppo/A37/gps/flp.conf:system/etc/flp.conf \
+    device/oppo/A37/gps/gps.conf:system/etc/gps.conf \
+    device/oppo/A37/gps/izat.conf:system/etc/izat.conf \
+    device/oppo/A37/gps/sap.conf:system/etc/sap.conf \
+    device/oppo/A37/gps/quipc.conf:system/etc/quipc.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -172,8 +171,8 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    device/lenovo/a6000/overlay \
-    device/lenovo/a6000/overlay-lineage
+    device/oppo/A37/overlay \
+    device/oppo/A37/overlay-lineage
 
 # Enforced RRO targets
 PRODUCT_ENFORCE_RRO_TARGETS := \
@@ -238,12 +237,12 @@ PRODUCT_PACKAGES += \
 
 # Media config
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/media_codecs.xml:system/vendor/etc/media_codecs.xml
+    device/oppo/A37/configs/media_codecs.xml:system/vendor/etc/media_codecs.xml
 
 # Media
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml \
-    device/lenovo/a6000/configs/media_codecs_performance.xml:system/vendor/etc/media_codecs_performance.xml
+    device/oppo/A37/configs/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml \
+    device/oppo/A37/configs/media_codecs_performance.xml:system/vendor/etc/media_codecs_performance.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -259,7 +258,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IRSC
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/sec_config:system/vendor/etc/sec_config
+    device/oppo/A37/configs/sec_config:system/vendor/etc/sec_config
 
 # First api level, device has been commercially launched
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -313,9 +312,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/lenovo/a6000/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl\
-    device/lenovo/a6000/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+    device/oppo/A37/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/oppo/A37/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl\
+    device/oppo/A37/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
 
 # Storage
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -348,15 +347,15 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/lenovo/a6000/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/lenovo/a6000/configs/WCNSS_qcom_cfg.ini:system/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+    device/oppo/A37/configs/p2p_supplicant_overlay.conf:system/vendor/etc/wifi/p2p_supplicant_overlay.conf \
+    device/oppo/A37/configs/wpa_supplicant_overlay.conf:system/vendor/etc/wifi/wpa_supplicant_overlay.conf \
+    device/oppo/A37/configs/WCNSS_qcom_cfg.ini:system/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/lenovo/a6000/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
-    device/lenovo/a6000/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+    device/oppo/A37/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/oppo/A37/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    device/oppo/A37/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -405,9 +404,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/data/netmgr_config.xml:system/vendor/etc/data/netmgr_config.xml \
-    device/lenovo/a6000/configs/data/qmi_config.xml:system/vendor/etc/data/qmi_config.xml \
-    device/lenovo/a6000/configs/data/dsi_config.xml:system/vendor/etc/data/dsi_config.xml
+    device/oppo/A37/configs/data/netmgr_config.xml:system/vendor/etc/data/netmgr_config.xml \
+    device/oppo/A37/configs/data/qmi_config.xml:system/vendor/etc/data/qmi_config.xml \
+    device/oppo/A37/configs/data/dsi_config.xml:system/vendor/etc/data/dsi_config.xml
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -419,8 +418,8 @@ PRODUCT_BOOT_JARS += \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
-    device/lenovo/a6000/seccomp/mediaextractor-seccomp.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+    device/oppo/A37/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
+    device/oppo/A37/seccomp/mediaextractor-seccomp.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -428,6 +427,7 @@ PRODUCT_PACKAGES += \
     accelcal \
     AccCalibration \
     sensord \
+    calmodule.cfg \
     sensors.msm8916
 
 # Permissions
@@ -438,7 +438,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/vendor/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/vendor/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/vendor/etc/permissions/handheld_core_hardware.xml \
-    device/lenovo/a6000/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
+    device/oppo/A37/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -446,7 +446,7 @@ PRODUCT_PACKAGES += \
 
 # Config File
 PRODUCT_COPY_FILES += \
-    device/lenovo/a6000/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
+    device/oppo/A37/configs/thermal-engine.conf:system/vendor/etc/thermal-engine.conf
 
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -460,4 +460,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.ums_adb=2285 \
     ro.usb.vid=2970
 
-$(call inherit-product, vendor/lenovo/a6000/a6000-vendor.mk)
+$(call inherit-product, vendor/oppo/A37/A37-vendor.mk)
