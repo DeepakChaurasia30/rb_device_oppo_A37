@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 #include <android/hardware/light/2.0/ILight.h>
 #include <hardware/lights.h>
 #include <hidl/Status.h>
-#include <map>
+#include <unordered_map>
 #include <mutex>
 
 namespace android {
@@ -29,22 +29,24 @@ namespace V2_0 {
 namespace implementation {
 
 using ::android::hardware::Return;
-using ::android::hardware::Void;
-using ::android::hardware::hidl_vec;
 using ::android::hardware::light::V2_0::ILight;
 using ::android::hardware::light::V2_0::LightState;
 using ::android::hardware::light::V2_0::Status;
 using ::android::hardware::light::V2_0::Type;
 
 class Light : public ILight {
-   public:
+  public:
     Light();
 
     Return<Status> setLight(Type type, const LightState& state) override;
     Return<void> getSupportedTypes(getSupportedTypes_cb _hidl_cb) override;
 
-   private:
-    std::mutex globalLock;
+  private:
+    void handleWhiteLed(const LightState& state, size_t index);
+
+    std::mutex mLock;
+    std::unordered_map<Type, std::function<void(const LightState&)>> mLights;
+    std::array<LightState, 2> mLightStates;
 };
 
 }  // namespace implementation
