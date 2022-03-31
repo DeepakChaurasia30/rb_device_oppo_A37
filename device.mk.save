@@ -41,11 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Namespace
-PRODUCT_BOARD_PLATFORM := msm8916
-PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
-
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
@@ -77,7 +72,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=280 \
     persist.graphics.vulkan.disable=true \
     persist.dbg.ims_volte_enable=1 \
-    persist.dbg.volte_avail_ovr=1
+    persist.dbg.volte_avail_ovr=1 
 
 # Disable buffer age
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -206,7 +201,9 @@ PRODUCT_PACKAGES += \
     libshim_camera \
     libcamera_shim \
     camera.msm8916 \
-    Camera2
+    Camera2 \
+    Snap \
+    SnapdragonCamera
 
 
 #PRODUCT_COPY_FILES += \
@@ -435,9 +432,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
-# Wifi
+# WiFi HAL
 PRODUCT_PACKAGES += \
- android.hardware.wifi@1.0-service
+    android.hardware.wifi@1.0-service
 
 # Wifi
 PRODUCT_PACKAGES += \
